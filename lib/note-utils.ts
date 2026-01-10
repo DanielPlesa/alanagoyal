@@ -19,21 +19,19 @@ export function groupNotesByCategory(notes: any[], pinnedNotes: Set<string>) {
     }
 
     let category = note.category;
-    if (!note.public) {
-      const createdDate = new Date(note.created_at);
+   const createdDate = new Date(note.created_at);
 
-      if (createdDate.toDateString() === today.toDateString()) {
-        category = "today";
-      } else if (createdDate.toDateString() === yesterday.toDateString()) {
-        category = "yesterday";
-      } else if (createdDate > sevenDaysAgo) {
-        category = "7";
-      } else if (createdDate > thirtyDaysAgo) {
-        category = "30";
-      } else {
-        category = "older";
-      }
-    }
+if (createdDate.toDateString() === today.toDateString()) {
+  category = "today";
+} else if (createdDate.toDateString() === yesterday.toDateString()) {
+  category = "yesterday";
+} else if (createdDate > sevenDaysAgo) {
+  category = "7";
+} else if (createdDate > thirtyDaysAgo) {
+  category = "30";
+} else {
+  category = "older";
+}
 
     if (!groupedNotes[category]) {
       groupedNotes[category] = [];
