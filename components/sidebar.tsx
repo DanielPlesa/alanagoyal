@@ -104,9 +104,9 @@ export default function Sidebar({
     refreshSessionNotes,
   } = useContext(SessionNotesContext);
 
-  const notes = useMemo(
-    () => [...publicNotes, ...sessionNotes],
-    [publicNotes, sessionNotes]
+const notes = useMemo(
+    () => [...publicNotes],
+    [publicNotes]
   );
 
   useEffect(() => {
@@ -445,7 +445,7 @@ export default function Sidebar({
         isMobile={isMobile}
       >
         <div ref={scrollViewportRef} className="flex flex-col w-full">
-          <SessionId setSessionId={setSessionId} />
+       {/*  <SessionId setSessionId={setSessionId} /> */}
           <CommandMenu
             notes={notes}
             sessionId={sessionId}
