@@ -1,4 +1,4 @@
- {/* import NewNote from "./new-note"; /> */}
+ {/* import NewNote from "./new-note";  */}
 
 interface NavProps {
   addNewPinnedNote: (slug: string) => void;
