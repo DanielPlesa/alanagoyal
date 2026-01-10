@@ -1,4 +1,4 @@
-import NewNote from "./new-note";
+ {/* import NewNote from "./new-note"; /> */}
 
 interface NavProps {
   addNewPinnedNote: (slug: string) => void;
@@ -36,12 +36,12 @@ export function Nav({
           <span className="opacity-0 group-hover:opacity-100 text-[10px] font-medium leading-none text-background -translate-y-[0.5px]">+</span>
         </button>
       </div>
-      <NewNote
+     {/* <NewNote
         addNewPinnedNote={addNewPinnedNote}
         clearSearch={clearSearch}
         setSelectedNoteSlug={setSelectedNoteSlug}
         isMobile={isMobile}
-      />
+   /> */}
     </div>
   );
 }
